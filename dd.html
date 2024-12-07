@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Management</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #216ca1, #bbdefb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .account-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #bbdefb;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 15px;
+            transition: background 0.3s;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        li:hover {
+            background: #90caf9;
+        }
+
+        .account-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            li {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="account-container">
+        <h1>My Account</h1>
+        <ul>
+            <li class="account-item">
+                <span class="icon">🏠</span>
+                <span>Addresses</span>
+            </li>
+            <li class="account-item">
+                <span class="icon">📦</span>
+                <span>Orders</span>
+            </li>
+            <li class="account-item">
+                <span class="icon">❓</span>
+                <span>Help</span>
+            </li>
+            <li class="account-item">
+                <span class="icon">🔑</span>
+                <span>Account Settings</span>
+            </li>
+            <li class="account-item">
+                <span class="icon">🔄</span>
+                <span>Payment Methods</span>
+            </li>
+            <li class="account-item">
+                <span class="icon">📧</span>
+                <span>Newsletter Preferences</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

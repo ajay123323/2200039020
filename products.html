@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products</title>
+  <style>
+    /* Basic Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #dddcdc 30%, #fad0c4 90%);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    #products {
+      padding: 80px 20px;
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    #products h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #3a3a87;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInText 1s ease-out forwards;
+    }
+
+    .product-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .product-item {
+      background: #9e9ea0;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeInProduct 1s ease-out forwards;
+      overflow: hidden;
+    }
+
+    .product-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .product-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .product-item h3 {
+      font-size: 1.5rem;
+      color: #ff6f61;
+      margin: 10px 0;
+    }
+
+    .product-item p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    .product-item .price {
+      font-size: 1.2rem;
+      color: #333;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .product-item .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .product-item button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-item .add-to-cart {
+      background-color: #4CAF50;
+      color: #fff;
+    }
+
+    .product-item .add-to-cart:hover {
+      background-color: #45a049;
+    }
+
+    .product-item .buy-now {
+      background-color: #ff5722;
+      color: #fff;
+    }
+
+    .product-item .buy-now:hover {
+      background-color: #e64a19;
+    }
+
+    .product-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      background-color: #f0f8ff;
+    }
+
+    /* Animations */
+    @keyframes fadeInText {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInProduct {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="product-grid">
+    <div class="product-item">
+      <img src="img1basket.jpg" alt="Handwoven Basket">
+      <h3>Handwoven Basket</h3>
+      <p>Beautifully crafted baskets made from natural materials.</p>
+      <div class="price">₹800</div>
+      <div class="buttons">
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+    <div class="product-item">
+      <img src="pot.jpg" alt="Clay Pottery">
+      <h3>Clay Pottery</h3>
+      <p>Traditional clay pots with intricate designs.</p>
+      <div class="price">₹500</div>
+      <div class="buttons">
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+    <div class="product-item">
+      <img src="Wooden Carvings.jpg" alt="Wooden Carvings">
+      <h3>Wooden Carvings</h3>
+      <p>Exquisite wooden carvings showcasing tribal artistry.</p>
+      <div class="price">₹1200</div>
+      <div class="buttons">
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+    <div class="product-item">
+      <img src="Beaded Jewelry.jpg" alt="Beaded Jewelry">
+      <h3>Beaded Jewelry</h3>
+      <p>Handmade jewelry crafted with colorful beads and patterns.</p>
+      <div class="price">₹400</div>
+      <div class="buttons">
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+    <div class="product-item">
+      <img src="Fabric Textiles.jpg" alt="Fabric Textiles">
+      <h3>Fabric Textiles</h3>
+      <p>Beautiful fabrics with traditional tribal patterns and colors.</p>
+      <div class="price">₹900</div>
+      <div class="buttons">
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+    <div class="product-item">
+      <img src="Leather Accessories.jpg" alt="Leather Accessories">
+      <h3>Leather Accessories</h3>
+      <p>Authentic leather items, handcrafted with intricate detail.</p>
+      <div class="price">₹1500</div>
+      <div class="buttons">
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
